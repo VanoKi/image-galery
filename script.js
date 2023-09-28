@@ -1,10 +1,23 @@
+const url = 'https://api.thecatapi.com/v1/images/search?size=full',
+      btn = document.querySelector('.btn'),
+      img = document.querySelector('.img')
+
+
 async function getData() {
-  const res = await fetch(url);
-  const data = await res.json();
-  console.log(data);
+  const response = await fetch(url);
+  // console.log(response)
+  const data = await response.json();
+  // const data = response.url
+  // console.log(data[0].url);
+  return data[0].url
 }
 
-const url = 'https://api.unsplash.com/search/photos?query=spring&per_page=30&orientation=landscape&client_id=Co0bDByYiOW4j5uXowur16UXCMXtYDVzbgwzM4SIcgc'
-getData();
+btn.addEventListener('click', async () => {
+  const imgUrl = await getData();
+  img.src = imgUrl
+})
 
-// console.log(getData()[results])
+img.addEventListener('click', async () => {
+  const imgUrl = await getData();
+  img.src = imgUrl
+})
