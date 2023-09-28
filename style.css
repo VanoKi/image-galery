@@ -14,10 +14,11 @@ body {
 .title {
   /* color: aliceblue; */
   color: #22254B;
+  font-size: 5vw;
 }
 
 .container {
-  margin-top: 13vh;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -34,8 +35,8 @@ body {
 }
 
 .img {
-  height: 100%;
-  width: 100%;
+  height: auto;
+  max-width: 100%;
   border-radius: 15px;
 }
 
@@ -47,6 +48,7 @@ body {
   border: 0px;
   border-radius: 10px;
   transition: .4s;
+  font-size: 4vw;
 }
 
 .btn:hover {
