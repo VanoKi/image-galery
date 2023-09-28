@@ -24,4 +24,4 @@ async function updateImage(){
 // })
 
 btn.addEventListener('click', updateImage);
-btn.addEventListener('click', updateImage)
+img.addEventListener('click', updateImage)
