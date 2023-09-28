@@ -10,7 +10,10 @@ async function getData() {
 }
 
 async function updateImage(){
-  img.src = await getData()
+  let isLoaded = img.complete;
+  if (isLoaded) {
+    img.src = await getData()
+  }
 }
 
 // btn.addEventListener('click', async () => {
