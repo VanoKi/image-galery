@@ -1,30 +1,38 @@
-const url = 'https://api.thecatapi.com/v1/images/search?size=full',
-      btn = document.querySelector('.btn'),
-      img = document.querySelector('.img')
+const API_KEY = 'd25525bd-c6e0-4592-a65e-cf58e952d88b'
+      API_URL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1'
 
+getMovies(API_URL)
 
-async function getData() {
-  const response = await fetch(url);
-  const data = await response.json();
-  return data[0].url
+async function getMovies(url){
+  const resp = await fetch(url, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-API-KEY': API_KEY,
+    },
+  });
+  const respData = await resp.json();
+  // console.log(respData)
+  showMovies(respData)
 }
 
-async function updateImage(){
-  let isLoaded = img.complete;
-  if (isLoaded) {
-    img.src = await getData()
-  }
+function showMovies(data){
+  const moviesEl = document.querySelector('.movies');
+  data.films.forEach((movie) => {
+    const movieEl = document.createElement('div');
+    movieEl.classList.add('movie');
+    movieEl.innerHTML = `
+    <div class="movie-cover-inner">
+            <img
+            src="${movie.posterUrlPreview}"
+            alt="movie_cover"
+            class="movie-cover-img">
+            <div class="movie-cover-darkened"></div>
+        </div>
+        <div class="movie-info">
+          <div class="movie-title">${movie.nameRu}</div>
+          <div class="movie-category">${movie.genres.map(genre => ` ${genre.genre}`)}</div>
+          <div class="movie-average movie-average-green">6</div>
+        </div>`;
+        moviesEl.appendChild(movieEl);
+  });
 }
-
-// btn.addEventListener('click', async () => {
-//   const imgUrl = await getData();
-//   img.src = imgUrl
-// })
-
-// img.addEventListener('click', async () => {
-//   const imgUrl = await getData();
-//   img.src = imgUrl
-// })
-
-btn.addEventListener('click', updateImage);
-img.addEventListener('click', updateImage)
