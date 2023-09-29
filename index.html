@@ -7,15 +7,30 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <h2 class="title">Cats</h2>
-    <div class="card">
-      <img src="img/cat.jpg" alt="Cats" class="img">
+  <header class="header">
+    <div class="header-content">
+      <a href="index.html" class="header-logo">Gallery</a>
     </div>
-    <button class="btn" type="button">
-      Next Cat
-    </button>
-  </div>
+    <form action="">
+      <input type="text" class="header-search" placeholder="search">
+    </form>
+  </header>
+  <main>
+    <div class="container">
+      <div class="movies">
+        <div class="movie">
+          <div class="movie-cover">
+            <img src="https://avatars.mds.yandex.net/get-kinopoisk-image/1629390/9e639ce5-0398-46c8-aa6b-f93ea4035a84/300x450" 
+            alt="movie_cover" class="movie-cover">
+        </div>
+        <div class="movie-info">
+          <div class="movie-title">Mortal Combat</div>
+          <div class="movie-category">Action</div>
+          <div class="movie-average movie-average-green">6</div>
+        </div>
+      </div>
+    </div>
+  </main>
   <script src="script.js"></script>
 </body>
 </html>
