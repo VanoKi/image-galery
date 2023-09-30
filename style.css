@@ -181,6 +181,8 @@ body {
   color: #fff;
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   border-radius: 4px;
 }
 
@@ -188,7 +190,7 @@ body {
   width: 400px;
   height: auto;
   margin: 0 auto;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border-radius: 4px;
 }
 .modal__movie-title {
@@ -196,7 +198,11 @@ body {
 .modal__movie-release-year {
 }
 .modal__movie-info {
-  margin-left: 20px;
+  /* margin-left: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .loader {
@@ -223,6 +229,7 @@ body {
 
 ul li {
   padding: 5px;
+  list-style-type: none;
 }
 
 .stop-scroll {
