@@ -36,7 +36,7 @@ function showMovies(data){
           <div class="movie-title">${movie.nameRu}</div>
           <div class="movie-category">${movie.genres.map(genre => ` ${genre.genre}`)}</div>
           <div class="movie-title">${movie.countries.map(country => ` ${country.country}`)}</div>
-          ${movie.rating&&
+          ${movie.rating !== `null` && movie.rating !== undefined &&
           `
           <div class="movie-average movie-average-${getClassByRate(movie.rating)}">${movie.rating}</div>
           `
