@@ -70,6 +70,7 @@ body {
 .movie-cover-img{
   max-width: 100%;
   height: 100%;
+  border-radius: 4px;
 }
 
 .movie-cover-darkened {
@@ -82,6 +83,7 @@ body {
   max-width: 100%;
   height: 100%;
   z-index: 1;
+  border-radius: 4px;
 }
 
 .movie-cover-darkened:hover {
@@ -109,6 +111,7 @@ body {
   color: lightsalmon;
   margin-bottom: 5px;
   text-align: center;
+  text-transform: capitalize;
 }
 
 .movie-country {
