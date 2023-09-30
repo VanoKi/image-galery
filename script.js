@@ -74,5 +74,19 @@ form.addEventListener('submit', (e) => {
 const modalEl = document.querySelector('.modal');
 
 modalEl.innerHTML = `
-
+  <div class="modal__card">
+  <img src="" alt="" class="modal__movie-backdrop">
+  <h2>
+    <span class="modal__movie-title">title</span>
+    <span class="modal__movie-release-year">year</span>
+  </h2>
+  <ul class="modal__movie-info">
+    <div class="loader"></div>
+    <li class="modal__movie-genre">genre</li>
+    <li class="modal__movie-runtime">runtime</li>
+    <li>site: <a href="" class="modal__movie-site"></a></li>
+    <li class="modal__movie-overview">overview</li>
+  </ul>
+  <button type="button" class="modal__btn_close">Close</button>
+  </div>
 `
