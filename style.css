@@ -117,6 +117,7 @@ body {
   justify-content: center;
   align-items: center;
   background: #1a191f;
+  opacity: 0.2;
 }
 
 .movie-average-green {
