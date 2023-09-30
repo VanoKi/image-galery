@@ -68,3 +68,11 @@ form.addEventListener('submit', (e) => {
     search.value ='' //удаляем поисковый запрос
   }
 })
+
+//Modal
+
+const modalEl = document.querySelector('.modal');
+
+modalEl.innerHTML = `
+
+`
