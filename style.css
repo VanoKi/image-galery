@@ -101,12 +101,14 @@ body {
   font-size: 16px;
   color: #1a191f;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .movie-category {
   font-size: 14px;
   color: lightsalmon;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .movie-country {
@@ -118,7 +120,7 @@ body {
   top: 10px;
   left: 10px;
   right: 0;
-  color: #fff;
+  /* color: rgba(244, 234, 118, 1); */
   font-size: 14px;
   border-radius: 50%;
   width: 36px;
@@ -127,17 +129,20 @@ body {
   justify-content: center;
   align-items: center;
   background: #1a191f;
-  opacity: 0.2;
+  opacity: 0.6;
 }
 
 .movie-average-green {
-  color:  green;
+  border: green solid 3px;
+  color: rgba(0, 255, 0, 1);
 }
 
 .movie-average-orange {
-  color: orange;
+  border: orange solid 3px;
+  color: rgb(245, 159, 61);
 }
 
 .movie-average-red {
-  color: red;
+  border: red solid 3px;
+  color: rgba(255, 0, 0, 1);
 }

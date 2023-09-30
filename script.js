@@ -32,8 +32,19 @@ function showMovies(data){
           <div class="movie-title">${movie.nameRu}</div>
           <div class="movie-category">${movie.genres.map(genre => ` ${genre.genre}`)}</div>
           <div class="movie-title">${movie.countries.map(country => ` ${country.country}`)}</div>
-          <div class="movie-average movie-average-green">${movie.rating}</div>
+          <div class="movie-average movie-average-${getClassByRate(movie.rating)}">${movie.rating}</div>
         </div>`;
         moviesEl.appendChild(movieEl);
   });
 }
+
+function getClassByRate(vote){
+  if (vote >= 7) {
+    return 'green'
+  }else if (vote >= 5){
+    return 'orange'
+  }else {
+    return 'red'
+  }
+}
+
