@@ -43,6 +43,7 @@ function showMovies(data){
           `
           }
         </div>`;
+        movieEl.addEventListener('click', () => openModal(movie.filmId))
         moviesEl.appendChild(movieEl);
   });
 }
@@ -73,7 +74,9 @@ form.addEventListener('submit', (e) => {
 
 const modalEl = document.querySelector('.modal');
 
-modalEl.innerHTML = `
+async function openModal(id){
+  modalEl.classList.add('modal--show')
+  modalEl.innerHTML = `
   <div class="modal__card">
   <img src="" alt="" class="modal__movie-backdrop">
   <h2>
@@ -90,3 +93,10 @@ modalEl.innerHTML = `
   <button type="button" class="modal__btn_close">Close</button>
   </div>
 `
+  const btnClose = document.querySelector('.modal__btn_close')
+  btnClose.addEventListener('click', () => closeModal())
+}
+
+function closeModal(){
+  modalEl.classList.remove('modal--show');
+}
