@@ -2,6 +2,7 @@ const API_KEY = 'd25525bd-c6e0-4592-a65e-cf58e952d88b'
       API_URL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_100_POPULAR_FILMS&page=1'
       API_URL_SEARCH = 'https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword='
       API_FILM_ID = `https://kinopoiskapiunofficial.tech/api/v2.2/films/`
+      body = document.querySelector('body')
 
 getMovies(API_URL)
 
@@ -94,7 +95,7 @@ async function openModal(id){
   <ul class="modal__movie-info">
     <div class="loader"></div>
     <li class="modal__movie-genre">${respData.genres.map(genre => ` ${genre.genre}`)}</li>
-    <li class="modal__movie-runtime">runtime: ${respData.filmLength}</li>
+    ${respData.filmLength ? `<li class="modal__movie-runtime">runtime: ${respData.filmLength}</li>` : ``}
     <li>site: <a href="${respData.webUrl}" class="modal__movie-site">${respData.webUrl}</a></li>
     <li class="modal__movie-overview">${respData.description}</li>
   </ul>
@@ -103,10 +104,12 @@ async function openModal(id){
 `
   const btnClose = document.querySelector('.modal__btn_close')
   btnClose.addEventListener('click', () => closeModal())
+  body.classList.add('stop-scroll')
 }
 
 function closeModal(){
   modalEl.classList.remove('modal--show');
+  body.classList.remove('stop-scroll')
 }
 
 window.addEventListener('click', (e) => {
