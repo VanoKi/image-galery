@@ -31,7 +31,8 @@ function showMovies(data){
         <div class="movie-info">
           <div class="movie-title">${movie.nameRu}</div>
           <div class="movie-category">${movie.genres.map(genre => ` ${genre.genre}`)}</div>
-          <div class="movie-average movie-average-green">6</div>
+          <div class="movie-title">${movie.countries.map(country => ` ${country.country}`)}</div>
+          <div class="movie-average movie-average-green">${movie.rating}</div>
         </div>`;
         moviesEl.appendChild(movieEl);
   });

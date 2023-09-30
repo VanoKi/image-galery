@@ -91,16 +91,26 @@ body {
 
 .movie-info {
   padding: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  align-items: center;
 }
 
 .movie-title {
   font-size: 16px;
-  color: #fff;
+  color: #1a191f;
+  margin-bottom: 5px;
 }
 
 .movie-category {
   font-size: 14px;
   color: lightsalmon;
+  margin-bottom: 5px;
+}
+
+.movie-country {
+  font-size: 14;
 }
 
 .movie-average {
@@ -121,13 +131,13 @@ body {
 }
 
 .movie-average-green {
-  border: 1px solid green;
+  color:  green;
 }
 
 .movie-average-orange {
-  border: 1px solid orange;
+  color: orange;
 }
 
 .movie-average-red {
-  border: 1px solid red;
+  color: red;
 }
