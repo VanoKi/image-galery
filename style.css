@@ -6,9 +6,8 @@
 
 body {
   height: 100vh;
-  /* background: #22254B; */
-  background: #edeef0;
-  /* background: #1a191f; */
+  /* background: #edeef0; */
+  background: #a09db0fe;
   justify-content: center;
   font-family: "Open Sans", sans-serif;
 }
@@ -108,7 +107,7 @@ body {
 
 .movie-category {
   font-size: 14px;
-  color: lightsalmon;
+  color: #edeef0;
   margin-bottom: 5px;
   text-align: center;
   text-transform: capitalize;
@@ -177,13 +176,14 @@ body {
   max-width: 600px;
   padding: 16px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-  background-color: #1a191f;
+  background-color: #7e7b8afe;
   color: #fff;
   display: flex;
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
   border-radius: 4px;
+  text-transform: capitalize;
 }
 
 .modal__movie-backdrop {
@@ -218,8 +218,7 @@ body {
   color: #ffd80e;
 }
 
-.modal__movie-overview {
-}
+.modal__movie-overview {text-transform: initial;}
 
 .modal__btn_close {
   padding: 5px;
