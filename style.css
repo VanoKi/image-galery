@@ -5,17 +5,11 @@
 }
 
 body {
-  height: 100vh;
+  /* height: 100vh; */
   /* background: #edeef0; */
   background: #a09db0fe;
-  justify-content: center;
+  /* justify-content: center; */
   font-family: "Open Sans", sans-serif;
-}
-
-.title {
-  /* color: aliceblue; */
-  color: #22254B;
-  font-size: 5vw;
 }
 
 .container {
@@ -26,212 +20,48 @@ body {
   align-items: center; */
   max-width: 1200px;
   margin: 0 auto;
-}
-
-.header-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 16px;
-  height: 60px;
-}
-
-.header-logo {
-  font-size: 32px;
-  text-decoration: none;
-  color: darkblue;
-}
-
-.header-search {
-  padding: 8px;
-  border: 2px solid;
-  border-radius: 5px;
-  outline: none;
-}
-
-.movies {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
+  height: 100vh;
 }
 
-.movie {
-  width: 240px;
-  margin: 10px;
-  position: relative;
+.title {
+  display: flex;
+  justify-content: center;
 }
 
-.movie-cover-inner {
-  position: relative;
-  height: 360px;
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.movie-cover-img{
-  max-width: 100%;
-  height: 100%;
-  border-radius: 4px;
+.post {
+  padding: 8px;
+  border-color: bisque;
+  border: 1px;
 }
 
-.movie-cover-darkened {
-  background-color: #000;
-  opacity: .1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  max-width: 100%;
-  height: 100%;
-  z-index: 1;
-  border-radius: 4px;
-}
-
-.movie-cover-darkened:hover {
-  background-color: gray;
+.pagi {
+  padding: 8px;
+  margin: 8px;
   cursor: pointer;
 }
 
-.movie-info {
-  padding: 10px 0px;
+.pagi__list {
   display: flex;
-  flex-direction: column;
-  /* justify-content: space-between; */
-  align-items: center;
-}
-
-.movie-title {
-  font-size: 16px;
-  color: #1a191f;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-.movie-category {
-  font-size: 14px;
-  color: #edeef0;
-  margin-bottom: 5px;
-  text-align: center;
-  text-transform: capitalize;
-}
-
-.movie-country {
-  font-size: 14;
-}
-
-.movie-average {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 0;
-  /* color: rgba(244, 234, 118, 1); */
-  font-size: 14px;
-  border-radius: 50%;
-  width: 36px;
-  height: 36px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #1a191f;
-  opacity: 0.6;
-}
-
-.movie-average-green {
-  border: green solid 3px;
-  color: rgba(0, 255, 0, 1);
-}
-
-.movie-average-orange {
-  border: orange solid 3px;
-  color: rgb(245, 159, 61);
-}
-
-.movie-average-red {
-  border: red solid 3px;
-  color: rgba(255, 0, 0, 1);
-}
-
-/*Modal*/
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 100;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.5);
-  transition: width 2s;
-}
-
-.modal--show {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal__card {
-  background: #fff;
-  max-width: 600px;
-  padding: 16px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
-  background-color: #7e7b8afe;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  /* justify-content: center; */
-  align-items: center;
-  border-radius: 4px;
-  text-transform: capitalize;
-}
-
-.modal__movie-backdrop {
-  width: 400px;
-  height: auto;
-  margin: 0 auto;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
-.modal__movie-title {
-}
-.modal__movie-release-year {
-}
-.modal__movie-info {
-  /* margin-left: 20px; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.loader {
-}
-
-.modal__movie-genre {
-}
-
-.modal__movie-runtime {
-}
-
-.modal__movie-site {
-  color: #ffd80e;
-}
-
-.modal__movie-overview {text-transform: initial;}
-
-.modal__btn_close {
-  padding: 5px;
-  margin: 10px;
-  align-self: center;
-}
-
-ul li {
-  padding: 5px;
   list-style-type: none;
 }
 
-.stop-scroll {
-  height: 100%;
-  overflow: hidden;
+.pagi__item {
+  padding: 8px;
+  margin: 8px;
+  cursor: pointer;
+}
+
+.pagi__item--active {
+  font-weight: 800;
+  color: gold;
 }
